@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="intro-text">
+      <h1>Comfort</h1>
+      <h3>Your dream interior design</h3>
+    </div>
+    <img class="chair" src="/img/chair-intro.png" alt="chair">
+    <img class="big-rose" src="/img/big-rose.png" alt="big-rose">
+    <img class="small-rose" src="/img/small-rose.png" alt="small-rose">
+  </header>
+
+  <section class="rose-content">
+    <h1 class="content-heading">Parallax</h1>
+    <p class="content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odit dolores necessitatibus
+      excepturi ex
+      similique quibusdam quidem sed, ipsa praesentium nobis nulla non quisquam ea ipsam unde temporibus error
+      asperiores? Consequatur dolor, earum suscipit natus dolore, deleniti non itaque illo a laboriosam, quae omnis
+      voluptate. Numquam dicta aperiam nam pariatur fugiat similique tempora. Ipsa necessitatibus ipsum, blanditiis,
+      quod debitis optio ratione provident a facere placeat suscipit! Ullam, soluta beatae, nobis, esse error ratione
+      aut suscipit eum impedit enim maxime nisi animi et inventore praesentium harum vero ut magnam. Minus veniam
+      adipisci saepe sequi nisi numquam ea, deserunt vero mollitia excepturi recusandae in perferendis dolor quas odit?
+      Quo, eveniet facilis fugit sunt officia quos vitae! Architecto deleniti harum laudantium. Assumenda pariatur
+      sapiente, laboriosam a deserunt temporibus odio excepturi minus quos molestias earum veniam neque hic perferendis
+      facilis incidunt magni ipsum praesentium illo eum qui? Dolores, hic maxime repudiandae repellat a quibusdam.
+      Maiores asperiores, ducimus sed molestias dicta officiis odio, voluptatibus doloribus aliquam nemo vel quae
+      perspiciatis magnam, maxime consequuntur similique libero fugiat adipisci? Soluta omnis qui enim nulla pariatur
+      temporibus neque odit sequi expedita atque non, laudantium autem architecto doloribus aspernatur, nesciunt
+      possimus ut quidem quaerat maiores voluptas reiciendis? Asperiores impedit quis quibusdam eius reiciendis iure
+      harum eaque nostrum, ipsa vitae repudiandae. Fugiat suscipit facere odit expedita et minima commodi iure
+      necessitatibus repudiandae atque quae natus tempore nobis, eum aut hic dignissimos molestiae laborum non sequi
+      libero quam! Cupiditate labore recusandae natus iste dolor cum repellat aliquid alias laudantium minima obcaecati
+      omnis quis, commodi, illo ipsum asperiores ab quam nobis quaerat dolorem, magni facilis quod! Quis corrupti ipsum
+      nisi. Aperiam ut iusto dignissimos? Nobis voluptas, tenetur velit ipsum sint similique harum accusamus facilis
+      veritatis unde, possimus hic quod neque mollitia aliquam qui commodi, quidem consequuntur modi culpa nam!
+      Exercitationem, officiis non!</p>
+  </section>
+  <script>
+    function parallax(element, distance, speed) {
+      const item = document.querySelector(element)
+      item.style.transform = `translateY(${distance * speed}px)`
+    }
+    window.addEventListener('scroll', function () {
+      parallax('header', window.scrollY, 1)
+      parallax('.small-rose', window.scrollY, 0.4)
+      parallax('.big-rose', window.scrollY, 0.2)
+    })
+  </script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
+  <!-- <script>
+    gsap.to('.chair', {
+      scrollTrigger: {
+        scrub: 5,
+      },
+      x: 30,
+    })
+
+    gsap.to('.big-rose', {
+      scrollTrigger: {
+        scrub: 3,
+      },
+      y: 150,
+    })
+
+    gsap.to('.small-rose', {
+      scrollTrigger: {
+        scrub: 2,
+      },
+      y: 400,
+    })
+  </script> -->
+
+</body>
+
+</html>
